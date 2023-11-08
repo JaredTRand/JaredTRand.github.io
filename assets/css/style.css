@@ -1,0 +1,75 @@
+body{
+   background-color: #69306D;
+}
+
+.top-buttons{
+   margin-top: 2.5%;
+   background-color: #A5668B;
+}
+
+.content-container{
+   padding: 1%;
+   background-color: white;
+   box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+    margin-bottom: 7.5vh;
+}
+
+.content-container-secondary{
+   padding: 1%;
+   background-color: white;
+   box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+    margin-bottom: 10vh;
+}
+
+.content-container-accordion{
+   margin-bottom: 7.5vh;
+   padding-left: 0%;
+}
+
+.content{
+   padding: 40px;
+}
+.content-secondary{
+   padding: 0px 40px 40px 40px;
+}
+
+
+#module {
+   font-size: 1rem;
+   line-height: 1.5;
+ }
+ 
+ 
+ #module #collapseExample.collapse:not(.show) {
+   display: block;
+   height: 3rem;
+   overflow: hidden;
+ }
+ 
+ #module #collapseExample.collapsing {
+   height: 3rem;
+ }
+ 
+ #module a.collapsed::after {
+   content: '+ Show More';
+ }
+ 
+ #module a:not(.collapsed)::after {
+   content: '- Show Less';
+ }
+
+ .nav-link{
+    color:white;
+ }
