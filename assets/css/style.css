@@ -1,9 +1,14 @@
 body{
    background-color: #69306D;
+   -webkit-transition: background-color 1s ease;
+   -moz-transition: background-color 1s ease;
+   -o-transition: background-color 1s ease;
+   transition: background-color 1s ease;
+   font-family: monospace
 }
 
+.row{--bs-gutter-x: 0;}
 .top-buttons{
-   margin-top: 2.5%;
    background-color: #A5668B;
 }
 
@@ -17,7 +22,6 @@ body{
       0 8px 8px hsl(0deg 0% 0% / 0.075),
       0 16px 16px hsl(0deg 0% 0% / 0.075)
     ;
-    margin-bottom: 7.5vh;
 }
 
 .content-container-secondary{
@@ -30,19 +34,29 @@ body{
       0 8px 8px hsl(0deg 0% 0% / 0.075),
       0 16px 16px hsl(0deg 0% 0% / 0.075)
     ;
-    margin-bottom: 10vh;
 }
 
-.content-container-accordion{
-   margin-bottom: 7.5vh;
+.content-container-with-header{
+   padding: 1%;
    padding-left: 0%;
+   background-color: white;
+   box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
 }
 
 .content{
    padding: 40px;
 }
 .content-secondary{
-   padding: 0px 40px 40px 40px;
+   padding: 40px;
+}
+.content-with-header{
+   padding: 0px 40px 40px 30px;
 }
 
 
@@ -73,3 +87,45 @@ body{
  .nav-link{
     color:white;
  }
+
+ .hexvalue{
+      width: fit-content;
+      padding: 2px;
+      background-color: rgba(255,255,255,0.3);
+      position: absolute;
+      cursor:pointer;
+}
+ 
+.collapse{
+   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.8);
+}
+
+.accordion-button:not(.collapsed){
+   background-color: white;
+   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0);
+}
+
+.section-wrapper{
+   padding: 1%;
+}
+
+.section-wrapper-inverse{
+   padding: 1%;
+   
+}
+/* .section-wrapper-inverse-title{
+   display: none;
+}
+ */
+.main-page-div{
+   min-height: 100vh;
+}
+
+.skills-box-cover{
+   height: 100%;
+   width: 100%;
+   z-index: 5;
+   opacity: 100%;
+   background-color: #000000;
+   box-shadow: inset 10px 10px 10px #000000;
+}

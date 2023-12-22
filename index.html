@@ -11,16 +11,18 @@
   <link href="assets/img/logo/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- StyleSheets -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="assets/css/style.css" rel="stylesheet" crossorigin="anonymous">
   <script>
      var x;
   </script>
 </head>
 <body>
-   <div class="container text-center">
-      <div id="top-nav-container" class="row">
-         <ul class="col rounded-top nav nav-tabs nav-fill top-buttons" id="top-nav" role="tablist">
+   <div id="hexvalue" class="hexvalue"></div>
+   <div class="main-page-div container text-center">
+      <!--v TOP NAVBAR v-->
+      <div id="top-nav-container navbar-static-top " class="row">
+         <ul class="col rounded-top nav nav-tabs nav-fill mt-5 top-buttons" id="top-nav" role="tablist">
             <li class="nav-item" role="presentation" data-content="home">
                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
             </li>
@@ -28,19 +30,45 @@
                <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="true">About</button>
                </li>
             <li class="nav-item" role="presentation" data-content="projects">
-               <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Projects</button>
+               <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Programming</button>
             </li>
-            <li class="nav-item" role="presentation" data-content="contact">
-               <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+            <li class="nav-item" role="presentation" data-content="art">
+               <button class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art-tab-pane" type="button" role="tab" aria-controls="art-tab-pane" aria-selected="false">Art / Games</button>
             </li>
          </ul>
       </div>
+      <!--^ TOP NAVBAR ^-->
+
 
       <section id="content-container-container">
-         <div id="home" style="display: none;">
-            <div class="row rounded-bottom content-container" >
-               <div id="content" class="col content rounded">
 
+         <!--v HOME v-->
+         <div id="home" style="display: none;">
+            <div class="row row-cols-1 rounded-bottom content-container mb-5" >
+               <div id="content" class="col content rounded">
+                  <div class="container">
+                     <div class="row">
+                       <div class="col-3 align-self-center">
+                           <img loading="lazy" src="https://jarofmilk.com/assets/img/smallerImgs/fillerPics/JaredPic.webp" class="about-pictures rounded-circle img-fluid shrink-mobile-img align-middle" alt="">
+                       </div>
+                       <div class="col-2"></div>
+                       <div class="col-7 align-self-center">
+                           <h1>I'm Jared Rand!</h1>
+                           <br>
+                           <h3>Programmer Analyst</h3>
+                           <h5>Las Vegas, NV</h5>
+                           <h5>JaredTRand@gmail.com</h5>
+                           <p class="fst-italic">
+                              I am currently employed at FDM4 America as a Programmer Analyst.<br>
+                              I am open for new professional opportunities.   
+                           </p>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row rounded-bottom content-container mb-5" >
+               <div id="content" class="col content rounded">  
                   <div class="row" data-aos="fade-up">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
                   </div>
@@ -49,7 +77,7 @@
                   </div>
                </div>
             </div>
-            <div class="row rounded content-container-secondary" >
+            <div class="row rounded content-container-secondary mb-5" >
                <div id="content" class="col content-secondary rounded">
                   <div class="row" data-aos="fade-up">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
@@ -59,43 +87,7 @@
                   </div>
                </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-            <div class=" row rounded content-container-accordion accordion" >
-               <div class="col accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                     Accordion Item #1
-                   </button>
-                 </h2>
-                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                   <div class="accordion-body">
-                     <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                   </div>
-                 </div>
-               </div>
-             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="row rounded content-container-secondary" >
+            <div class="row rounded content-container-secondary mt-5" >
                <div id="content" class="col content rounded">
                   <div class="row" data-aos="fade-up">
                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
@@ -106,178 +98,412 @@
                </div>
             </div>
          </div>
+         <!--^ HOME ^-->
 
+         <!--v ABOUT ME v-->
          <div id="aboutme" style="display: none;">
-            <div class="row rounded-bottom content-container" >
+            <div class="row rounded-bottom content-container mb-0" >
                <div id="content" class="col content rounded">
-                  <div class="row" data-aos="fade-up">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
-                  </div>
-                  <div class="row" data-aos="fade-up">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
+                  <div class="container">
+                     <div class="row justify-content-center">
+                      </div>
                   </div>
                </div>
             </div>
-            <div class="row rounded content-container-secondary" >
-               <div id="content" class="col content rounded">
-                  <div class="row" data-aos="fade-up">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
-                  </div>
-                  <div class="row" data-aos="fade-up">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g transform="translate(0 24) scale(1 -1)"><path fill="white" d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19"/></g></svg>
+            
+            <div id="top-nav-container navbar-static-top " class="row">
+               <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                  <li role="presentation" data-content="home">
+                     <div class="nav-link">Skills</div>
+                  </li>
+               </ul>
+            </div>
+            <div class="section-wrapper rounded-end rounded-bottom mb-5">
+               <div class="row rounded content-container-with-header" >
+                  <div id="content" class="col rounded">
+                     <div class="container">
+                        <div class="row">
+                           <div class="container">
+                              <div class="row justify-content-center">
+                                 
+                                 <div class="col col-md-2 m-3">
+                                    <div class="section-wrapper-inverse rounded rounded-bottom">
+                                       <div class="align-self-center">
+                                          <iconify-icon class="iconify-skill-icon p-2" icon="bxl:java" style="color: #160221;" width="100" height="100"></iconify-icon>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col col-md-2 m-3">
+                                    <div class="section-wrapper-inverse rounded rounded-bottom">
+                                       <div class="align-self-center">
+                                          <iconify-icon class="iconify-skill-icon p-2" icon="bxl:python" style="color: #160221;" width="100" height="100"></iconify-icon>
+                                       </div>
+                                    </div>
+                                 </div>
+         
+                                 <div class="col col-md-2 m-3">
+                                    <div class="section-wrapper-inverse rounded rounded-bottom">
+                                       <div class="align-self-center">
+                                          <iconify-icon class="iconify-skill-icon p-2" icon="akar-icons:html-fill" style="color: #160221;" width="100" height="100"></iconify-icon>
+                                       </div>
+                                    </div>
+                                 </div>
+         
+                                 <div class="col col-md-2 m-3">
+                                    <div class="section-wrapper-inverse rounded rounded-bottom">
+                                       <div class="align-self-center">
+                                          <iconify-icon class="iconify-skill-icon p-2" icon="akar-icons:css-fill" style="color: #160221;" width="100" height="100"></iconify-icon>
+                                       </div>
+                                    </div>
+                                 </div>
+         
+                                 <div class="col col-md-2 m-3">
+                                    <div class="section-wrapper-inverse rounded rounded-bottom">
+                                       <div class="align-self-center">
+                                          <iconify-icon class="iconify-skill-icon p-2" icon="material-symbols:javascript" style="color: #160221;" width="100" height="100"></iconify-icon>
+                                       </div>
+                                    </div>
+                                 </div>
+         
+                                 <div class="col col-md-2 m-3">
+                                    <div class="section-wrapper-inverse rounded rounded-bottom">
+                                       <div class="align-self-center">
+                                          <iconify-icon class="iconify-skill-icon p-2" icon="bi:git" style="color: #160221;" width="100" height="100"></iconify-icon>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-            <div class="row rounded content-container-secondary" >
-               <div id="content" class="col content rounded">
-                  <div class="row" data-aos="fade-up">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
+
+            <div id="top-nav-container navbar-static-top " class="row">
+               <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                  <li role="presentation" data-content="home">
+                     <div class="nav-link">Professional Experience</div>
+                  </li>
+               </ul>
+            </div>
+            <div class="section-wrapper rounded-end rounded-bottom mb-5">
+               <div class="row rounded content-container-with-header mb-5" >
+                  <div id="content" class="col content-with-header rounded mt-3">
+                     <div class="container">
+                        <div class="row">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col align-self-left text-start">
+                                    <h3>Programmer Analyst</h3>
+                                    <hr/>
+                                    <h5><i class="bi bi-building"></i>  FDM4 America</h5>
+                                    <h5><i class="bi bi-geo-alt"></i>  Las Vegas, NV</h5> 
+                                    <h5><i class="bi bi-calendar3"></i>  2022 - Present</h5>
+                                    <br>
+                                    <ul>
+                                       <li>Codes, tests, debugs, implements, and documents basic programs. Assists in the modification of company products and/or customer/internal systems to meet the needs of the client and/or end-user.</li>
+                                       <li>Assists in the research and analysis of existing systems and program requirements; assists in preparing documentation to change existing programs. Performs data analysis to support internal and external project needs.</li>
+                                       <li>Designs basic programs for projects or enhancements to existing programs.</li>
+                                       <li>Writes specifications for programs of low to moderate complexity.</li>
+                                       <li>Assists in resolving routine production support problems.</li>
+                                       <li>Assists in the completion of unit testing by preparing test data, running tests and evaluating results. Develops screen tests and debugging problems. Develops test plans to verify logic of new or modified programs.</li>
+                                       <li>Creates basic documentation in work assignments such as program code.</li>
+                                       <li>Conducts routine quality assurance activities such as peer reviews.</li>
+                                       <li>Remains abreast of and researches industry technical trends and new development to maintain current skills and remain current with industry standards.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="row" data-aos="fade-up">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat, risus non pretium vulputate, nibh velit lobortis neque, id suscipit enim leo in augue. Morbi tincidunt nisi neque, sed consectetur mauris tempor nec. Cras mollis posuere eros, id maximus nisl ultrices sed. Nunc at lacinia ipsum, egestas egestas enim. Maecenas at mollis leo, non lacinia lectus. In non mi at velit dignissim commodo nec ut massa. Quisque accumsan eleifend velit. Ut congue, neque at tristique tristique, eros nibh tincidunt enim, non placerat lectus mauris accumsan metus. Vestibulum ac eleifend metus. Praesent nec lacinia est. Sed ac risus eu purus elementum imperdiet vitae ac neque. Cras semper, libero sit amet ultrices sollicitudin, risus arcu eleifend nunc, eget lobortis quam orci tristique nunc. Sed lobortis commodo nulla, et ultricies nisl ultrices sed. Mauris vel bibendum est. Cras tempus consequat mauris, in feugiat mauris auctor non. </p>
+               </div>
+               <div class="row rounded content-container-with-header" >
+                  <div id="content" class="col content-with-header rounded mt-3">
+                     <div class="container">
+                        <div class="row">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col align-self-left text-start">
+                                    <h3>Associate Professional Programmer Analyst</h3>
+                                    <hr/>
+                                    <h5><i class="bi bi-building"></i>  DXC Technology</h5>
+                                    <h5><i class="bi bi-geo-alt"></i>  Remote Position</h5> 
+                                    <h5><i class="bi bi-calendar3"></i>  2020 - 2022</h5>
+                                    <br>
+                                    <ul>
+                                       <li>Codes, tests, debugs, implements, and documents basic programs. Assists in the modification of company products and/or customer/internal systems to meet the needs of the client and/or end-user.</li>
+                                       <li>Assists in the research and analysis of existing systems and program requirements; assists in preparing documentation to change existing programs. Performs data analysis to support internal and external project needs.</li>
+                                       <li>Designs basic programs for projects or enhancements to existing programs.</li>
+                                       <li>Writes specifications for programs of low to moderate complexity.</li>
+                                       <li>Assists in resolving routine production support problems.</li>
+                                       <li>Assists in the completion of unit testing by preparing test data, running tests and evaluating results. Develops screen tests and debugging problems. Develops test plans to verify logic of new or modified programs.</li>
+                                       <li>Creates basic documentation in work assignments such as program code.</li>
+                                       <li>Conducts routine quality assurance activities such as peer reviews.</li>
+                                       <li>Remains abreast of and researches industry technical trends and new development to maintain current skills and remain current with industry standards.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+         <!--^ ABOUT ME ^-->
+
 
          
+         <!--v programming v-->
+         <div id="projects" style="display: none;">
+            
+            
+            <a href="https://github.com/JaredTRand/CSC-450--TWITTER-BOT">
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">TWITTER BOT</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/CSC440--RoundRobin">
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">ROUND ROBIN SIMULATION</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/Reddit-GPU-Monitoring-Bot" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">REDDIT GPU MONITORING BOT</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/8%20Puzzle%20--%20Iterative%20Deepening/ProjectThree%20-%208PuzzleOne.ipynb" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">8 PUZZLE SOLVER -- ITERATIVE DEEPENING</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Vacuum%20Cleaner%20Agents/MyProjectOne.ipynb" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">Vacuum Cleaner AI Agent</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Missionaries%20and%20Cannibals/MCProblem.ipynb" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">Prisoners and Guards Solver</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Minesweeper%20Logic%20Agent/Project%205%20--%20Minesweeper%20Bot.ipynb" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">Minesweeper Bot</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://github.com/JaredTRand/CSC249--Pig-Latin-Translator/blob/master/Project_5_Minesweeper_Bot.ipynb" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">Pig Latin Translator</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://jarofmilk.com/namegen" >
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">Funny Name Generator</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div style="background: url(assets/img/fillerPics/hero2-bg.jpg)" class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+            <a href="https://jarofmilk.com/dream-interpreter">
+               <div id="top-nav-container navbar-static-top" class="row mt-5">
+                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                     <li role="presentation" data-content="home">
+                        <div class="nav-link">Dream interpreter</div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                  <div style="background: url(assets/img/fillerPics/golden.gif)" class="row rounded content-container-with-header" >
+                     <div id="content" class="col rounded">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+
+         </div>
+         <!--^ programming ^-->
+         
       </section>
-      
-         <!-- <div id="content" class="col content">
-            <div id="home" style="display: none;">
-               <p>home</p>
-            </div>
-            <div id="aboutme" style="display: none;">
-               <div class="row" data-aos="fade-up">
-                  <div class="col">
-                  <img loading="lazy" src="https://jarofmilk.com/assets/img/smallerImgs/fillerPics/JaredPic.webp" class="about-pictures rounded-circle img-fluid shrink-mobile-img" alt="">
-                  </div>
-                  <div class="col-md-7">
-                  <h2>I'm Jared Rand!</h2>
-                  <h5>Las Vegas, NV</h5>
-                  <h5>JaredTRand@gmail.com</h5>
-                  <p class="fst-italic">
-                     I am currently employed at FDM4 America as a Programmer Analyst.
-                     I am open for new professional opportunities.   
-                  </p>
-                  <div id="module" class="container">
-                     <h3>Bacon Ipsum</h3>
-                     <p class="collapse" id="collapseExample" aria-expanded="false">
-                     Bacon ipsum dolor amet doner picanha tri-tip biltong leberkas salami meatball tongue filet mignon landjaeger tail. Kielbasa salami tenderloin picanha spare ribs, beef ribs strip steak jerky cow. Pork chop chicken ham hock beef ribs turkey jerky. Shoulder
-                     beef capicola doner, tongue tail sausage short ribs andouille. Rump frankfurter landjaeger t-bone, kielbasa doner ham hock shankle venison. Cupim capicola kielbasa t-bone, ball tip chicken andouille venison pork chop doner bacon beef ribs kevin shankle.
-                     Short loin leberkas tenderloin ground round shank, brisket strip steak ham hock ham.
-                     </p>
-                     <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
-                  </div>
-                  
-                  
-                  <div class="">
-                     <p>A determined Programmer Analyst with over 2 years of professional experience and over 3 years of academic experience. What I lack in experience, I make up for with a desire to learn and a determination to get it right. I'm also a wannabe Full Stack Web Developer. </p>
-                     <p class="">
-                     People often ask me, "Jared, what was it like to go to MIT?" I tell them, "I have no idea, I graduated from Eastern Connecticut State University with a Bachelor's of Science in Computer Science and a minor in Digital Art and Design."
-                     </p>
-                     <p class="">
-                     Over my four years at college, I recieved experience in many different programming languages and many different technologies. My favorite languages are Python and Java, but I am able to write in various other languages as well. During my minor, I learned various methods for creating digital artwork, typically in Adobe Illustrator and Photoshop, but also 3D modelling programs like Blender and Maya.
-                     </p>
-                     <p class="">
-                     Throughout my time at DXC, I have learned many new skills, but most important of them is how to work alongside others. In college, they don't often have you work with your peers, especially on the same project. At DXC, I have learned much about how to work productively alongside others, and have learned quite a bit about how to be productive in a work environment.    
-                     </p>
-                  </div>
-                  </div>
-               </div>
-      
-               <div class="row" data-aos="fade-up">
-                  <div class="col-md-5 order-1 order-md-2">
-                  <img loading="lazy" src="https://jarofmilk.com/assets/img/smallerImgs/fillerPics/dxc-dtc-office.webp" class="about-pictures img-fluid" alt="">
-                  </div>
-                  <div class="col-md-7 order-2 order-md-1">
-                  <h2 class="resume-title">Professional Experience</h2>
-                  <h3>DXC Technology, Remote Position </h3>
-                  <h5>Associate Professional Programmer Analyst</h5>
-                  <h5>2020 - Present</h5>
-                  
-                  <ul>
-                     <li><i class="bi bi-check"></i>Codes, tests, debugs, implements, and documents basic programs. Assists in the modification of company products and/or customer/internal systems to meet the needs of the client and/or end-user.</li>
-                     <li><i class="bi bi-check"></i>Assists in the research and analysis of existing systems and program requirements; assists in preparing documentation to change existing programs. Performs data analysis to support internal and external project needs.</li>
-                     <li><i class="bi bi-check"></i>Designs basic programs for projects or enhancements to existing programs.</li>
-                     <li><i class="bi bi-check"></i>Writes specifications for programs of low to moderate complexity.</li>
-                     <li><i class="bi bi-check"></i>Assists in resolving routine production support problems.</li>
-                     <li><i class="bi bi-check"></i>Assists in the completion of unit testing by preparing test data, running tests and evaluating results. Develops screen tests and debugging problems. Develops test plans to verify logic of new or modified programs.</li>
-                     <li><i class="bi bi-check"></i>Creates basic documentation in work assignments such as program code.</li>
-                     <li><i class="bi bi-check"></i>Conducts routine quality assurance activities such as peer reviews.</li>
-                     <li><i class="bi bi-check"></i>Remains abreast of and researches industry technical trends and new development to maintain current skills and remain current with industry standards.</li>
-                  </ul>
-                  </div>
-               </div>
-      
-               <div class="row" data-aos="fade-up">
-                  <div class="col-md-5">
-                  <img loading="lazy" src="https://jarofmilk.com/assets/img/smallerImgs/fillerPics/ecsu_faic.webp" class="about-pictures img-fluid" alt="">
-                  </div>
-                  <div class="col-md-7">
-                  <h2>Eastern Connecticut State University</h2>
-                  <h5>3.47 GPA out of 4</h5>
-                  <h6>2016 - 2020</h6>
-                  <p class="fst-italic">
-                     The Computer Science degree program at Eastern Connecticut State University provides students the foundations and skills for future work and careers in computing. Additionally the curriculum prepares students to continue acquiring new knowledge and skills, to further their study, and to advance in a fast-changing world. We accomplish these goals by placing our computer science program in the context of the liberal arts core curriculum. Upon graduation, students will:
-                  </p>
-                  <ul>
-                     <li><i class="bi bi-check"></i> Possess practical and theoretical knowledge of computer science sufficient to work professionally and contribute to the regional and global economic development.</li>
-                     <li><i class="bi bi-check"></i> Be able to apply computational techniques to design and implement solutions to real-world problems.</li>
-                     <li><i class="bi bi-check"></i> Be prepared for advanced education in computer science and continued professional development.</li>
-                     <li><i class="bi bi-check"></i> Possess the skills and the intellectual abilities that will enable them to adapt in the ever-changing field of computer science.</li>
-                  </ul>
-                  </div>
-               </div>
-            </div>
-            <div id="projects" style="display: none;">
-               <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
-                      </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div id="contact" style="display: none;"></div>
-          </div>
-      </div> -->
-   <!-- </div> -->
+   </div>
 
 
-   <script src="/assets/js/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
-   <script src="/assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <div class="b-divider"></div>
+      <footer class="py-3 mt-5 border-top rounded-top container-fluid">
+         <div class="row px-5 align-items-center">
+            <div class="col col-lg-1">
+               <img class="img-fluid" src="assets/img/logo/favicon.png">
+            </div>
+            <div class="col col-lg">Absolutely No Copyright© <script>document.write(new Date().getFullYear())</script> Company, Inc</div>
+            <div class="col col-lg float-end">
+               <ul class="nav list-unstyled d-flex">
+                  <li class="ms-3"><a class="text-muted" href="#"><iconify-icon icon="mdi:linkedin"></iconify-icon></a></li>
+                  <li class="ms-3"><a class="text-muted" href="#"><iconify-icon icon="mdi:github"></iconify-icon></a></li>
+                  <li class="ms-3"><a class="text-muted" href="#"><iconify-icon icon="cib:itch-io"></iconify-icon></a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+  
+   
+
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
    <script type="module" src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
    <script type="module" src="./assets/js/script.js" crossorigin="anonymous"></script>
 </body>
