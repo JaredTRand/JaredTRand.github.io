@@ -21,7 +21,23 @@
    <div id="hexvalue" class="hexvalue"></div>
    <div class="main-page-div container text-center">
       <!--v TOP NAVBAR v-->
-      <div id="top-nav-container navbar-static-top " class="row">
+      <div id="top-nav-container" class=" p-0 m-0 container navbar-static-top ">
+         <div class="row row-cols-4 rounded-top nav nav-tabs  mt-sm-5 top-buttons " id="top-nav" role="tablist">
+            <div class="col  nav-item" role="presentation" data-content="home">
+               <button style="width:100%; height: 100%;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+            </div>
+            <div class="col  nav-item" role="presentation" data-content="aboutme">
+               <button style="width:100%; height: 100%;" class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="true">About</button>
+            </div>
+            <div class="col  nav-item" role="presentation" data-content="projects">
+               <button style="width:100%; height: 100%;" class="fs-md-5 nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Programming</button>
+            </div>
+            <div class="col  nav-item" role="presentation" data-content="art">
+               <button style="width:100%; height: 100%;" class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art-tab-pane" type="button" role="tab" aria-controls="art-tab-pane" aria-selected="false">Art / Games</button>
+            </div>
+         </div>
+      </div>
+      <!-- <div id="top-nav-container navbar-static-top " class="row">
          <ul class="col rounded-top nav nav-tabs nav-fill mt-5 top-buttons" id="top-nav" role="tablist">
             <li class="nav-item" role="presentation" data-content="home">
                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
@@ -36,7 +52,7 @@
                <button class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art-tab-pane" type="button" role="tab" aria-controls="art-tab-pane" aria-selected="false">Art / Games</button>
             </li>
          </ul>
-      </div>
+      </div> -->
       <!--^ TOP NAVBAR ^-->
 
 
@@ -192,7 +208,7 @@
             </div>
             <div class="section-wrapper rounded-end rounded-bottom mb-5">
                <div class="row rounded content-container-with-header mb-5" >
-                  <div id="content" class="col content-with-header rounded mt-3">
+                  <div id="content" class="col content-with-header rounded p-0">
                      <div class="container">
                         <div class="row">
                            <div class="container">
@@ -223,7 +239,7 @@
                   </div>
                </div>
                <div class="row rounded content-container-with-header" >
-                  <div id="content" class="col content-with-header rounded mt-3">
+                  <div id="content" class="col content-with-header rounded p-0">
                      <div class="container">
                         <div class="row">
                            <div class="container">
@@ -262,216 +278,230 @@
          <!--v programming v-->
          <div id="projects" style="display: none;">
             
+            <div class="container">
+               <div class="row row-cols-1 ">
+
+      
+                  <a class ="col pe-5" href="https://jarofmilk.com/namegen" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">Funny Name Generator</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div style="background: url(assets/img/fillerPics/hero2-bg.jpg)" class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col">
+                                       <h4 class="text-start text-dark text-decoration-none">A website I made for a friend to generate a funny character name. It used NodeJS to query my server</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col ps-5" href="https://jarofmilk.com/dream-interpreter">
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">Dream interpreter</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div style="background: url(assets/img/fillerPics/golden.gif)" class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col">
+                                       <h1 class="text-decoration-none">Let AI Interpret your dreams for you</h1>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+
+                  <a class="col pe-5" href="https://github.com/JaredTRand/CSC-450--TWITTER-BOT">
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">TWITTER BOT</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col">
+                                       <h4 class="text-start text-dark text-decoration-none">A twitter bot I made in perhaps the most inefficient way (due to the fact that, at the time, I was too stubborn to learn selenium). It navigates the screen visually, and gathers data by clicking. But it served its purpose. Check it out! </h4>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class="col ps-5" href="https://github.com/JaredTRand/CSC440--RoundRobin">
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">ROUND ROBIN SIMULATION</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col pe-5" href="https://github.com/JaredTRand/Reddit-GPU-Monitoring-Bot" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">REDDIT GPU MONITORING BOT</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col ps-5" href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/8%20Puzzle%20--%20Iterative%20Deepening/ProjectThree%20-%208PuzzleOne.ipynb" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">8 PUZZLE SOLVER -- ITERATIVE DEEPENING</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col pe-5" href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Vacuum%20Cleaner%20Agents/MyProjectOne.ipynb" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">Vacuum Cleaner AI Agent</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col ps-5" href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Missionaries%20and%20Cannibals/MCProblem.ipynb" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">Prisoners and Guards Solver</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col pe-5" href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Minesweeper%20Logic%20Agent/Project%205%20--%20Minesweeper%20Bot.ipynb" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">Minesweeper Bot</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+      
+                  <a class ="col ps-5" href="https://github.com/JaredTRand/CSC249--Pig-Latin-Translator/blob/master/Project_5_Minesweeper_Bot.ipynb" >
+                     <div id="top-nav-container navbar-static-top" class="row mt-5">
+                        <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
+                           <li role="presentation" data-content="home">
+                              <div class="nav-link">Pig Latin Translator</div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="section-wrapper rounded-end rounded-bottom mb-5">
+                        <div class="row rounded content-container-with-header" >
+                           <div id="content" class="col rounded">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+
+      
+               </div>
+            </div>
             
-            <a href="https://github.com/JaredTRand/CSC-450--TWITTER-BOT">
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">TWITTER BOT</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/CSC440--RoundRobin">
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">ROUND ROBIN SIMULATION</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/Reddit-GPU-Monitoring-Bot" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">REDDIT GPU MONITORING BOT</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/8%20Puzzle%20--%20Iterative%20Deepening/ProjectThree%20-%208PuzzleOne.ipynb" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">8 PUZZLE SOLVER -- ITERATIVE DEEPENING</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Vacuum%20Cleaner%20Agents/MyProjectOne.ipynb" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">Vacuum Cleaner AI Agent</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Missionaries%20and%20Cannibals/MCProblem.ipynb" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">Prisoners and Guards Solver</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/CSC375--Artificial-Intelligence/blob/master/Minesweeper%20Logic%20Agent/Project%205%20--%20Minesweeper%20Bot.ipynb" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">Minesweeper Bot</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://github.com/JaredTRand/CSC249--Pig-Latin-Translator/blob/master/Project_5_Minesweeper_Bot.ipynb" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">Pig Latin Translator</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://jarofmilk.com/namegen" >
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">Funny Name Generator</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div style="background: url(assets/img/fillerPics/hero2-bg.jpg)" class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-
-            <a href="https://jarofmilk.com/dream-interpreter">
-               <div id="top-nav-container navbar-static-top" class="row mt-5">
-                  <ul class="col col-auto rounded-top nav nav-tabs nav-fill top-buttons section-wrapper-title border-0" id="top-nav" role="tablist">
-                     <li role="presentation" data-content="home">
-                        <div class="nav-link">Dream interpreter</div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="section-wrapper rounded-end rounded-bottom mb-5">
-                  <div style="background: url(assets/img/fillerPics/golden.gif)" class="row rounded content-container-with-header" >
-                     <div id="content" class="col rounded">
-                        <div class="container">
-                           <div class="row">
-                              <div class="col"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
 
          </div>
          <!--^ programming ^-->
