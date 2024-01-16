@@ -90,6 +90,7 @@ body{
 
  .hexvalue{
       width: fit-content;
+      top: 0;
       padding: 2px;
       background-color: rgba(255,255,255,0.3);
       position: absolute;
@@ -129,3 +130,9 @@ body{
    background-color: #000000;
    box-shadow: inset 10px 10px 10px #000000;
 }
+
+a {
+   text-decoration: none !important;
+ }
+
+
