@@ -13,7 +13,9 @@ $( document ).ready(function() {
 
       if(!$("#" + contentToShow).is(":visible")){
          $("#content-container-container").children().slideUp("fast").promise().done(function(){
-            $("#" + contentToShow).slideDown("fast");
+            $("#" + contentToShow).slideDown("fast",function(){
+               $(window).scrollTop(0);
+            });
          });
       }
    });

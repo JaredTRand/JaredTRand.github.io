@@ -135,4 +135,17 @@ a {
    text-decoration: none !important;
  }
 
+ #mobile-nav-container{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+ }
 
+@media only screen and (min-width: 768px) {
+   #top-nav-container{display: block;}
+   #mobile-nav-container{display:none;}
+ }
+ @media only screen and (max-width: 768px) {
+    #top-nav-container{display: none;}
+   #mobile-nav-container{display:block;}
+}

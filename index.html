@@ -18,6 +18,22 @@
   </script>
 </head>
 <body>
+   <div id="mobile-nav-container" class=" p-0 m-0">
+      <div class="row row-cols-4 rounded-top nav nav-tabs  mt-sm-5 top-buttons " id="top-nav" role="tablist">
+         <div class="col  nav-item" role="presentation" data-content="home">
+            <button style="width:100%; height: 100%;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">  <iconify-icon icon="ic:round-home"></iconify-icon>  </button>
+         </div>
+         <div class="col  nav-item" role="presentation" data-content="aboutme">
+            <button style="width:100%; height: 100%;" class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="true">  <iconify-icon icon="mdi:about"></iconify-icon>  </button>
+         </div>
+         <div class="col  nav-item" role="presentation" data-content="projects">
+            <button style="width:100%; height: 100%;" class="fs-md-5 nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">  <iconify-icon icon="solar:programming-bold"></iconify-icon>  </button>
+         </div>
+         <div class="col  nav-item" role="presentation" data-content="art">
+            <button style="width:100%; height: 100%;" class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art-tab-pane" type="button" role="tab" aria-controls="art-tab-pane" aria-selected="false"><iconify-icon icon="mdi:art"></iconify-icon> + <iconify-icon icon="fluent-mdl2:game"></iconify-icon></button>
+         </div>
+      </div>
+   </div>
    <div id="hexvalue" class="hexvalue"></div>
    <div class="main-page-div container text-center">
        <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -28,19 +44,21 @@
       <div id="top-nav-container" class=" p-0 m-0 container navbar-static-top ">
          <div class="row row-cols-4 rounded-top nav nav-tabs  mt-sm-5 top-buttons " id="top-nav" role="tablist">
             <div class="col  nav-item" role="presentation" data-content="home">
-               <button style="width:100%; height: 100%;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+               <button title="Home" style="width:100%; height: 100%;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
             </div>
             <div class="col  nav-item" role="presentation" data-content="aboutme">
-               <button style="width:100%; height: 100%;" class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="true">About</button>
+               <button title="About Me" style="width:100%; height: 100%;" class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="true">About</button>
             </div>
             <div class="col  nav-item" role="presentation" data-content="projects">
-               <button style="width:100%; height: 100%;" class="fs-md-5 nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Programming</button>
+               <button title="Programming" style="width:100%; height: 100%;" class="fs-md-5 nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Programming</button>
             </div>
             <div class="col  nav-item" role="presentation" data-content="art">
-               <button style="width:100%; height: 100%;" class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art-tab-pane" type="button" role="tab" aria-controls="art-tab-pane" aria-selected="false">Art / Games</button>
+               <button title="Art / Games" style="width:100%; height: 100%;" class="nav-link" id="art-tab" data-bs-toggle="tab" data-bs-target="#art-tab-pane" type="button" role="tab" aria-controls="art-tab-pane" aria-selected="false">Art / Games</button>
             </div>
          </div>
       </div>
+
+
       <!-- <div id="top-nav-container navbar-static-top " class="row">
          <ul class="col rounded-top nav nav-tabs nav-fill mt-5 top-buttons" id="top-nav" role="tablist">
             <li class="nav-item" role="presentation" data-content="home">
@@ -125,6 +143,7 @@
                <div id="content" class="col content rounded">
                   <div class="container">
                      <div class="row justify-content-center">
+
                       </div>
                   </div>
                </div>
@@ -280,7 +299,15 @@
          
          <!--v programming v-->
          <div id="projects" style="display: none;">
-            
+            <div class="row rounded-bottom content-container mb-0" >
+               <div id="content" class="col content rounded">
+                  <div class="container">
+                     <div class="row justify-content-center">
+                        
+                      </div>
+                  </div>
+               </div>
+            </div>
             <div class="container">
                <div class="row row-cols-1 ">
 
@@ -521,20 +548,26 @@
 
       <footer class="text-center text-lg-start pt-3 mt-5 rounded-top" style="background-color: #db6930;">
         <div class="container d-flex justify-content-center py-5 ">
-          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
-            <iconify-icon icon="mdi:linkedin"></iconify-icon>
-          </button>
-          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
-            <iconify-icon icon="mdi:github"></iconify-icon>
-          </button>
-          <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
-            <iconify-icon icon="cib:itch-io"></iconify-icon>
-          </button>
+           <a href="https://www.linkedin.com/in/jared-rand">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <iconify-icon icon="mdi:linkedin"></iconify-icon>
+            </button>
+          </a>
+          <a href="https://github.com/jaredtrand">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <iconify-icon icon="mdi:github"></iconify-icon>
+            </button>
+          </a>
+          <a href="https://jarofmilk.itch.io">
+            <button  type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <iconify-icon icon="cib:itch-io"></iconify-icon>
+            </button>
+          </a>
         </div>
     
         <!-- Copyright -->
         <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-         Absolutely No Copyright © <script>document.write(new Date().getFullYear())</script> Company, Inc
+         Absolutely No Copyright © <script>document.write(new Date().getFullYear())</script> JarOfMilk, Inc
         </div>
         <!-- Copyright -->
       </footer>
