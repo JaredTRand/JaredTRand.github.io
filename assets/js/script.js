@@ -128,7 +128,7 @@ function updateColors(color){
 
 var createdArtImages = false;
 function createArtImages(){
-   var artFolder = 'assets/img/smallerImgs/Art/'
+   var artFolder = 'assets/img/smallerImgs/art/'
    /* var $grid = $("#masonry-grid"); */
    var count = 0;
 
