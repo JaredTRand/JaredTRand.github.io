@@ -10,7 +10,9 @@ $( document ).ready(function() {
 
    $( ".nav-item").on( "click", function() {
       var contentToShow = $(this).data("content");
-
+      if(contentToShow == "art"){
+         if(!createdArtImages) createArtImages();
+      }
       if(!$("#" + contentToShow).is(":visible")){
          $("#content-container-container").children().slideUp("fast").promise().done(function(){
             $("#" + contentToShow).slideDown("fast",function(){
@@ -122,4 +124,35 @@ function updateColors(color){
    $('.section-wrapper').css("background-color", inverted_color);
    $('.section-wrapper-title').css("background-color", inverted_color);
    $('#hexvalue').html(color);
+}
+
+var createdArtImages = false;
+function createArtImages(){
+   var artFolder = 'assets/img/smallerImgs/Art/'
+   /* var $grid = $("#masonry-grid"); */
+   var count = 0;
+
+/*    $grid.masonry({
+      columnWidth:10, 
+      gutterWidth: 15,
+      itemSelector: '.grid-item'
+   }); */
+   $.ajax({
+        url : artFolder,
+        success: function (data) {
+            $(data).find("a").attr("href", function (i, val) {
+               if (val.match(/\.(jpe?g|png|webp|gif)$/)) { 
+                  count += 1;
+                  var image = $('<a class ="col"  > <div class="section-wrapper rounded  m-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + val + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
+                  /* $grid.append(image).masonry('appended', image); */
+                  $("#art-col-"+count).append(image);
+                  if(count >= 3){
+                     count = 0;
+                  }
+               }
+            });
+        }
+    }); 
+    /* $grid.masonry('reloadItems') */
+    createdArtImages = true;
 }

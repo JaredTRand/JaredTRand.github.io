@@ -149,3 +149,8 @@ a {
     #top-nav-container{display: none;}
    #mobile-nav-container{display:block;}
 }
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
