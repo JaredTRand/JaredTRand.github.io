@@ -129,22 +129,15 @@ function updateColors(color){
 var createdArtImages = false;
 function createArtImages(){
    var artFolder = 'assets/img/smallerImgs/art/'
-   /* var $grid = $("#masonry-grid"); */
    var count = 0;
-
-/*    $grid.masonry({
-      columnWidth:10, 
-      gutterWidth: 15,
-      itemSelector: '.grid-item'
-   }); */
    $.ajax({
+        type: 'POST',
         url : artFolder,
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
                if (val.match(/\.(jpe?g|png|webp|gif)$/)) { 
                   count += 1;
-                  var image = $('<a class ="col"  > <div class="section-wrapper rounded  m-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + val + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
-                  /* $grid.append(image).masonry('appended', image); */
+                  var image = $('<a id="art-piece-' + count + '" class ="col"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + val + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
                   $("#art-col-"+count).append(image);
                   if(count >= 3){
                      count = 0;
@@ -153,6 +146,5 @@ function createArtImages(){
             });
         }
     }); 
-    /* $grid.masonry('reloadItems') */
     createdArtImages = true;
 }
