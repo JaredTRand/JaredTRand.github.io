@@ -131,7 +131,6 @@ function createArtImages(){
    var artFolder = 'assets/img/smallerImgs/art/'
    var count = 0;
    $.ajax({
-        type: 'POST',
         url : artFolder,
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
