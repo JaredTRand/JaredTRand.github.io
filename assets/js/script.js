@@ -94,6 +94,31 @@ function padZero(str, len) {
 
 function updateColors(color){
    var inverted_color = invertColor(color);
+
+   //background color main-color and text inverted.
+   $(".main-color").each(function(){
+      $(this).css("background-color", color);
+      $(this).css("color", inverted_color);
+   });
+   $(".main-color-background").each(function(){
+      $(this).css("background-color", color);
+   });
+   $(".main-color-text").each(function(){
+      $(this).css("color", color);
+   });
+
+   $(".inverted-color").each(function(){
+      $(this).css("background-color", inverted_color);
+      $(this).css("color", color);
+   })
+   $(".inverted-color-background").each(function(){
+      $(this).css("background-color", inverted_color);
+   })
+   $(".inverted-color-text").each(function(){
+      $(this).css("color", inverted_color);
+   })
+
+   
    $("body").css("background-color", color);
 
    //nav tabs background and text
@@ -114,7 +139,6 @@ function updateColors(color){
 
    //iconify
    $(".iconify-skill-icon").css("color", inverted_color);
-/*    $(".skills-box-cover").css("background-color", color); */
    
 
    $("footer").css("background-color", inverted_color);
@@ -128,7 +152,6 @@ function updateColors(color){
 
 var createdArtImages = false;
 function createArtImages(){
-   var artFolder = 'assets/img/smallerImgs/art/'
    var count = 0;
    $.ajax({
         url : "https://jarofmilk.com/api/getArtPaths",
@@ -137,12 +160,12 @@ function createArtImages(){
         crossDomain: true,
         contentType: 'application/json',
         success: function (data) {
-         console.log(data);
             for(var x in data["small"]){
                var path = data["small"][x];
+               var largeFilename = data["large"][x];
                if (path.match(/\.(jpe?g|png|webp|gif)$/)) { 
                   count += 1;
-                  var image = $('<a id="art-piece-' + count + '" class ="col"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
+                  var image = $('<a id="art-piece-' + count + '" class ="art-piece col" data-largefilepath = ' + largeFilename + '> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
                   $("#art-col-"+count).append(image);
                   if(count >= 3){
                      count = 0;
