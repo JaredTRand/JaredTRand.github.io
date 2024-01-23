@@ -184,7 +184,7 @@ function createArtImages(){
 
 
                   smallcount += 1;
-                  image = $('<a id="art-piece-' + smallcount + '" class ="art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
+                  image = $('<a id="small-art-piece-' + smallcount + '" class ="small-art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
                   shortest = getShortest(smArtCols);
                   $(shortest).append(image);
                }
@@ -217,13 +217,21 @@ function getShortest(elements){
 
 var createdSkillBoxes = false;
 function addSkillBoxes(){
-   var skills = ["Java", "Python", "HTML", "CSS", "Javascript", "Git"];
-   var icons  = ["bxl:java", "bxl:python", "akar-icons:html-fill", "akar-icons:css-fill", "material-symbols:javascript", "bi:git"];
-
-   skills.forEach(function(skill, index){
-      var skill_box = $('<a href="javascript:void(0)" class="col col-md-2 m-3 skill-boxes" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="' + skill + '" tabindex="0"> <div class="section-wrapper-inverse rounded rounded-bottom"> <div class="align-self-center"> <iconify-icon class="iconify-skill-icon p-2" icon="' + icons[index] +'" style="color: #160221;" width="100" height="100"></iconify-icon> </div> </div> </a>')
+   const skillsAndIcons = {"Java":"bxl:java",
+                           "Python":"bxl:python",
+                           "HTML":"akar-icons:html-fill",
+                           "CSS":"akar-icons:css-fill",
+                           "Javascript":"material-symbols:javascript",
+                           "Git":"bi:git",
+                           "Atlassian Suite":"mdi:atlassian",
+                           "Powershell":"mdi:powershell",
+                           "Blender":"simple-icons:blender", 
+                           "Illustrator":"devicon-plain:illustrator"};
+                           
+   for(const skill in skillsAndIcons){
+      var skill_box = $('<a href="javascript:void(0)" class="col col-md-2 m-3 skill-boxes" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="' + skill + '" tabindex="0"> <div class="section-wrapper-inverse rounded rounded-bottom"> <div class="align-self-center"> <iconify-icon class="iconify-skill-icon p-2" icon="' + skillsAndIcons[skill] +'" style="color: #160221;" width="100" height="100"></iconify-icon> </div> </div> </a>')
       $("#skill-boxes-here").append(skill_box)
-   });
+   }
 
    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
