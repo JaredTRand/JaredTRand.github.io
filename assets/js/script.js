@@ -160,7 +160,6 @@ function createArtImages(){
    var count = 0;
    
    var smallcount = 0;
-   var smallcountMax = 3;
 
    var regArtCols = $(".art-piece-col"); 
    var smArtCols = $(".small-art-piece-col"); 
@@ -176,11 +175,16 @@ function createArtImages(){
                var largeFilename = data["large"][x];
                if (path.match(/\.(jpe?g|png|webp|gif)$/)) { 
                   count += 1;
-                  var shortest = getShortest(regArtCols);
                   var image = $('<a id="art-piece-' + count + '" class ="art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
                   
+                  var shortest = getShortest(regArtCols);
                   $(shortest).append(image);
 
+
+                  smallcount += 1;
+                  image = $('<a id="art-piece-' + smallcount + '" class ="art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
+                  shortest = getShortest(smArtCols);
+                  $(shortest).append(image);
                }
             }
         }
