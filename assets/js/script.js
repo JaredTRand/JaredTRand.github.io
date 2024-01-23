@@ -238,3 +238,4 @@ function addSkillBoxes(){
    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
    createdSkillBoxes = true;
 }
+
