@@ -3,18 +3,20 @@ $( document ).ready(function() {
    $("#content-container-container").children().first().show();
    updateColors(getHexFromTime());
 
+   //start color changing
    setInterval( function()
    { 
       if(!timeStop)  updateColors(getHexFromTime());
    } , 1000 );
 
+   //add skill boxes
+   if(!createdSkillBoxes) addSkillBoxes();
+
+
    $( ".nav-item").on( "click", function() {
       var contentToShow = $(this).data("content");
       if(contentToShow == "art"){
          if(!createdArtImages) createArtImages();
-      }
-      if(contentToShow == "aboutme"){
-         if(!createdSkillBoxes) addSkillBoxes();
       }
       if(!$("#" + contentToShow).is(":visible")){
          $("#content-container-container").children().slideUp("fast").promise().done(function(){
@@ -225,5 +227,5 @@ function addSkillBoxes(){
 
    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-   
+   createdSkillBoxes = true;
 }
