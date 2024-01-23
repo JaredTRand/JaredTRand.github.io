@@ -144,17 +144,23 @@ a {
    width: 100%;
  }
 
+ /* show desktop */
 @media only screen and (min-width: 768px) {
    #top-nav-container{display: block;}
    #mobile-nav-container{display:none;}
    .art-piece-col{display: block;}
    .small-art-piece-col{display:none;}
+   .show-on-mobile{display:none;}
+   .show-on-desktop{display:block;}
  }
+ /* show mobile */
  @media only screen and (max-width: 768px) {
     #top-nav-container{display: none;}
    #mobile-nav-container{display:block;}
    .art-piece-col{display: none;}
    .small-art-piece-col{display:block;}
+   .show-on-mobile{display:block;}
+   .show-on-desktop{display:none;}
 }
 
 .grid-sizer,
