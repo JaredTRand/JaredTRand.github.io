@@ -222,6 +222,7 @@ function addSkillBoxes(){
                            "HTML":"akar-icons:html-fill",
                            "CSS":"akar-icons:css-fill",
                            "Javascript":"material-symbols:javascript",
+                           "Progress OpenEdge ABL":"simple-icons:progress",
                            "Git":"bi:git",
                            "Atlassian Suite":"mdi:atlassian",
                            "Powershell":"mdi:powershell",
