@@ -37,7 +37,7 @@
    <div id="hexvalue" class="hexvalue"></div>
    <div class="main-page-div container text-center">
        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-         <strong>Hey! Listen!</strong> This site is still under construction, so please mind any dust.
+         <iconify-icon icon="mdi:fairy"></iconify-icon> <strong>Hey! Listen!</strong> This site is still under construction, so please mind any dust.
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
        </div>
       <!--v TOP NAVBAR v-->
@@ -145,55 +145,55 @@
                      <div class="container">
                         <div class="row">
                            <div class="container">
-                              <div class="row justify-content-center">
-                                 
-                                 <div class="col col-md-2 m-3">
+                              <div id="skill-boxes-here" class="row justify-content-center">
+
+                                 <!-- <a href="javascript:void(0)" class="col col-md-2 m-3 skill-boxes" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="Top popover" tabindex="0">
                                     <div class="section-wrapper-inverse rounded rounded-bottom">
                                        <div class="align-self-center">
                                           <iconify-icon class="iconify-skill-icon p-2" icon="bxl:java" style="color: #160221;" width="100" height="100"></iconify-icon>
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
 
-                                 <div class="col col-md-2 m-3">
+                                 <a href="javascript:void(0)" class="col col-md-2 m-3  skill-boxes">
                                     <div class="section-wrapper-inverse rounded rounded-bottom">
                                        <div class="align-self-center">
                                           <iconify-icon class="iconify-skill-icon p-2" icon="bxl:python" style="color: #160221;" width="100" height="100"></iconify-icon>
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
          
-                                 <div class="col col-md-2 m-3">
+                                 <a href="javascript:void(0)" class="col col-md-2 m-3  skill-boxes">
                                     <div class="section-wrapper-inverse rounded rounded-bottom">
                                        <div class="align-self-center">
                                           <iconify-icon class="iconify-skill-icon p-2" icon="akar-icons:html-fill" style="color: #160221;" width="100" height="100"></iconify-icon>
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
          
-                                 <div class="col col-md-2 m-3">
+                                 <a href="javascript:void(0)" class="col col-md-2 m-3  skill-boxes">
                                     <div class="section-wrapper-inverse rounded rounded-bottom">
                                        <div class="align-self-center">
                                           <iconify-icon class="iconify-skill-icon p-2" icon="akar-icons:css-fill" style="color: #160221;" width="100" height="100"></iconify-icon>
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
          
-                                 <div class="col col-md-2 m-3">
+                                 <a href="javascript:void(0)" class="col col-md-2 m-3  skill-boxes">
                                     <div class="section-wrapper-inverse rounded rounded-bottom">
                                        <div class="align-self-center">
                                           <iconify-icon class="iconify-skill-icon p-2" icon="material-symbols:javascript" style="color: #160221;" width="100" height="100"></iconify-icon>
                                        </div>
                                     </div>
-                                 </div>
+                                 </a>
          
-                                 <div class="col col-md-2 m-3">
+                                 <a href="javascript:void(0)" class="col col-md-2 m-3  skill-boxes">
                                     <div class="section-wrapper-inverse rounded rounded-bottom">
                                        <div class="align-self-center">
                                           <iconify-icon class="iconify-skill-icon p-2" icon="bi:git" style="color: #160221;" width="100" height="100"></iconify-icon>
                                        </div>
                                     </div>
-                                 </div>
+                                 </a> -->
 
                               </div>
                            </div>
@@ -604,9 +604,11 @@
                                  <div class="row justify-content-center">
 
                                     <div class="row justify-content-center">
-                                       <div id="art-col-1" class="col-4 p-0 m-0"></div>
-                                       <div id="art-col-2" class="col-4 p-0 m-0"></div>
-                                       <div id="art-col-3" class="col-4 p-0 m-0"></div>
+                                       <div id="art-col-1" class="art-piece-col col-4 p-0 m-0" style="height: fit-content;"></div>
+                                       <div id="art-col-2" class="art-piece-col col-4 p-0 m-0" style="height: fit-content;"></div>
+                                       <div id="art-col-3" class="art-piece-col col-4 p-0 m-0" style="height: fit-content;"></div>
+                                       <div id="small-art-col-1" class="small-art-piece-col col-6 p-0 m-0" style="height: fit-content;"></div>
+                                       <div id="small-art-col-2" class="small-art-piece-col col-6 p-0 m-0" style="height: fit-content;"></div>
                                     </div>
                                     
                                  </div>
@@ -627,7 +629,7 @@
 
     <div class="b-divider py-3 mt-5"></div>
 
-      <footer class="text-center text-lg-start pt-3 mt-5 rounded-top" style="background-color: #db6930;">
+      <footer id="footer" class="text-center text-lg-start pb-md-0 pb-sm-5 pt-3 mt-5 rounded-top" style="background-color: #db6930;">
         <div class="container d-flex justify-content-center py-5 ">
            <a href="https://www.linkedin.com/in/jared-rand" target="_blank">
             <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
@@ -649,6 +651,9 @@
         <!-- Copyright -->
         <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
          Absolutely No Copyright © <script>document.write(new Date().getFullYear())</script> JarOfMilk, Inc
+        </div>
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         Theme designed by me!
         </div>
         <!-- Copyright -->
       </footer>

@@ -13,6 +13,9 @@ $( document ).ready(function() {
       if(contentToShow == "art"){
          if(!createdArtImages) createArtImages();
       }
+      if(contentToShow == "aboutme"){
+         if(!createdSkillBoxes) addSkillBoxes();
+      }
       if(!$("#" + contentToShow).is(":visible")){
          $("#content-container-container").children().slideUp("fast").promise().done(function(){
             $("#" + contentToShow).slideDown("fast",function(){
@@ -21,6 +24,8 @@ $( document ).ready(function() {
          });
       }
    });
+
+
 });
 
 var timeStop = false;
@@ -153,6 +158,12 @@ function updateColors(color){
 var createdArtImages = false;
 function createArtImages(){
    var count = 0;
+   
+   var smallcount = 0;
+   var smallcountMax = 3;
+
+   var regArtCols = $(".art-piece-col"); 
+   var smArtCols = $(".small-art-piece-col"); 
    $.ajax({
         url : "https://jarofmilk.com/api/getArtPaths",
         type: 'GET',
@@ -165,14 +176,50 @@ function createArtImages(){
                var largeFilename = data["large"][x];
                if (path.match(/\.(jpe?g|png|webp|gif)$/)) { 
                   count += 1;
-                  var image = $('<a id="art-piece-' + count + '" class ="art-piece col" data-largefilepath = ' + largeFilename + '> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
-                  $("#art-col-"+count).append(image);
-                  if(count >= 3){
-                     count = 0;
-                  }
+                  var shortest = getShortest(regArtCols);
+                  var image = $('<a id="art-piece-' + count + '" class ="art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
+                  
+                  $(shortest).append(image);
+
                }
             }
         }
     }); 
     createdArtImages = true;
+}
+
+function getShortest(elements){
+   if (!elements || elements.length === 0) {
+      return null;
+   }
+
+   var currShortest = elements[0];
+
+   elements.each(function(){
+      $("#art").show();
+      var nextHeight = $(this).height();
+      var currheight = $(currShortest).height();
+      $("#art").hide();
+
+      if(currheight > nextHeight ){
+         currShortest = $(this);
+     }
+   });
+
+   return currShortest;
+}
+
+var createdSkillBoxes = false;
+function addSkillBoxes(){
+   var skills = ["Java", "Python", "HTML", "CSS", "Javascript", "Git"];
+   var icons  = ["bxl:java", "bxl:python", "akar-icons:html-fill", "akar-icons:css-fill", "material-symbols:javascript", "bi:git"];
+
+   skills.forEach(function(skill, index){
+      var skill_box = $('<a href="javascript:void(0)" class="col col-md-2 m-3 skill-boxes" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="' + skill + '" tabindex="0"> <div class="section-wrapper-inverse rounded rounded-bottom"> <div class="align-self-center"> <iconify-icon class="iconify-skill-icon p-2" icon="' + icons[index] +'" style="color: #160221;" width="100" height="100"></iconify-icon> </div> </div> </a>')
+      $("#skill-boxes-here").append(skill_box)
+   });
+
+   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+   
 }
