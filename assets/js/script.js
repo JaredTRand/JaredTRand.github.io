@@ -28,6 +28,12 @@ $( document ).ready(function() {
    });
 
 
+   $("body").on( "click", ".art-piece", function() {
+      $("#modalImage").attr("src", $(this).data("largefilepath"));
+      $("#exampleModal").modal('toggle');
+   });
+
+
 });
 
 var timeStop = false;
@@ -184,7 +190,7 @@ function createArtImages(){
 
 
                   smallcount += 1;
-                  image = $('<a id="small-art-piece-' + smallcount + '" class ="small-art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
+                  image = $('<a id="small-art-piece-' + smallcount + '" class ="art-piece col" data-largefilepath = ' + largeFilename + ' href="javascript:void(0)"> <div class="section-wrapper rounded  mb-2 mx-1"> <div class="row rounded content-container-with-header p-0 m-0" > <div id="content" class="col rounded"> <div class="container p-0 m-0"> <div class="row"> <div class="col"> <img src="' + path + '" class="card-img-top art-card rounded"> </div> </div> </div> </div> </div> </div> </a>');
                   shortest = getShortest(smArtCols);
                   $(shortest).append(image);
                }
