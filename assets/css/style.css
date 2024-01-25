@@ -167,3 +167,20 @@ a {
 .grid-item {
   width: 33.333%;
 }
+
+#artBoxModal .modal-dialog{
+   max-width: 90% !important;
+   max-height: 90vh !important;
+}
+#artBoxModal .modal-content{
+   max-width: 90%;
+   max-height: 90vh !important;
+}
+#artBoxModal .btn-close{
+   right:0; 
+   position: absolute; 
+   background-color: aquamarine;
+}
+#artBoxModal #modalImage{
+   max-height: 90vh;
+}

@@ -30,7 +30,7 @@ $( document ).ready(function() {
 
    $("body").on( "click", ".art-piece", function() {
       $("#modalImage").attr("src", $(this).data("largefilepath"));
-      $("#exampleModal").modal('toggle');
+      $("#artBoxModal").modal('toggle');
    });
 
 
