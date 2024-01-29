@@ -12,12 +12,12 @@ function randColor(){
 
     $.ajax({
       method: 'GET',
-      url: 'assets/js/index.php',
+      url: 'https://jarofmilk.com/api/getSDVname',
       async: true,
       dataType: 'text',
       success: function(data) { 
-        // $('#generatedName').text(data);
-        $('#generatedName').text("WIP, trying to switch it over to an API")
+        $('#generatedName').text(data);
+        //$('#generatedName').text("WIP, trying to switch it over to an API")
 
         var end = Date.now() + (150);
         var colors = [randColor(), randColor()];
