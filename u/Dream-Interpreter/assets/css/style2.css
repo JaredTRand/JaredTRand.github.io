@@ -1,0 +1,26 @@
+#main{
+   background-image: url("../img/golden.gif");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.first-container{
+   height: 100vh;
+}
+
+#submit{
+   background-color: rgba(255, 255, 255, 0.2);
+}
+
+#dreamText{
+   background-color: rgba(255, 255, 255, 0.75);
+}
+
+#generated{
+   background-color: rgba(255, 255, 255, 0.75);
+   max-height: 75vh;
+}
+.generated-container{
+
+}

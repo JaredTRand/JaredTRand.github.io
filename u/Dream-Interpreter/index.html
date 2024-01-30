@@ -6,83 +6,99 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Dream Interpreter</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style2.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <h1 id="text1">Dream Interpreter</h1>
-      
+  <section id="main">
+    <div class="first-container container d-flex align-items-center justify-content-center">
+       <div class="row w-100">
+          <div class="col">
 
-      <div id="mainDiv" class="form-control-lg">
-        <h3 class="generated" id="generated"></h3>
+               <div class="row pb-3">
+                  <div class="col col-12 d-flex justify-content-center">
+                     <h1 id="text1" class="text-white">Dream Interpreter</h1>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col col-12 d-flex justify-content-center ">
+                     <div class="generated-container rounded">
+                        <p id="generated" class="p-2 rounded generated dreamText overflow-auto"></p>
+                     </div>
+                  </div>
+               </div>
 
-        <textarea id="dreamText" placeholder="Describe your dream"></textarea>
+               <div class="row px-4">
+                  <div class="col col-12 d-flex justify-content-center">
+                     <textarea id="dreamText" class="dreamText rounded w-100" placeholder="Describe your dream"></textarea>
+                  </div>
+               </div>
+               <div class="row pt-3">
+                  <div class="col col-12 d-flex justify-content-center">
+                     <button id="submit" class="btn btn-outline-light">Interpret!</button>
+                     <button style="display: none" id="submit-loading" class="btn btn-outline-light" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="sr-only">Loading...</span>
+                     </button>
+                  </div>
+               </div>
 
-        <button id="submit" class="btn btn-get-started">Interpret!</button>
-
-        <button style="display: none" id="submit-loading" class="btn btn-get-started" type="button" disabled>
-          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-          <span class="sr-only">Loading...</span>
-        </button>
-      </div>
-
-      
-      
+         </div>
+       </div>
     </div>
-  </section><!-- End Hero -->
+   </section>
+   <div class="container mw-100">
+
+      <footer id="footer" class="row text-center text-lg-start pb-md-0 pb-sm-5 pt-3 rounded-top" style="background-color: #db6930;">
+         <div class="container d-flex justify-content-center py-5 ">
+            <a href="https://www.linkedin.com/in/jared-rand" target="_blank">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <iconify-icon icon="mdi:linkedin"></iconify-icon>
+            </button>
+            </a>
+            <a href="https://github.com/jaredtrand" target="_blank">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <iconify-icon icon="mdi:github"></iconify-icon>
+            </button>
+            </a>
+            <a href="https://jarofmilk.itch.io" target="_blank">
+            <button  type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+               <iconify-icon icon="cib:itch-io"></iconify-icon>
+            </button>
+            </a>
+         </div>
+
+         <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         Absolutely No Copyright © <script>document.write(new Date().getFullYear())</script> JarOfMilk, Inc
+         </div>
+         <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         Theme designed by me!
+         </div>
+      </footer>
+   </div>
+ 
 
  
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container d-md-flex py-4">
 
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; No Copyright. Absolutely No Rights Reserved.
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.linkedin.com/in/jared-rand-217497141/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/NotEnoughMilk" class="github"><i class="bx bxl-github"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
   <script src="assets/js/script.js"></script>
 
 </body>
