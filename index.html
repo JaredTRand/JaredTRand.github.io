@@ -20,15 +20,18 @@
 <body class="main-color-background">
  
  <!-- Modal -->
- <div class="modal fade" id="artBoxModal" tabindex="-1" aria-labelledby="artBoxModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered justify-content-center">
-     <div class="modal-content p-0 m-0">
-      <button type="button" class="btn-close p-1 m-1" data-bs-dismiss="modal" aria-label="Close"></button>
-      <img id="modalImage" src="" class="rounded">
-     </div>
-   </div>
- </div>
- 
+   <div id="artBoxModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content inverted-color">
+          <div class="modal-body p-1">
+            <button type="button" class="btn-close p-1 m-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img id="modalImage" src="" class="rounded img-fluid modalImage">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
    <div id="mobile-nav-container" class=" p-0 m-0">
       <div class="row row-cols-4 rounded-top nav nav-tabs  mt-sm-5 top-buttons " id="top-nav" role="tablist">
          <div class="col  nav-item" role="presentation" data-content="home">

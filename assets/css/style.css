@@ -169,18 +169,17 @@ a {
 }
 
 #artBoxModal .modal-dialog{
-   max-width: 90% !important;
-   max-height: 90vh !important;
+   max-width: max-content !important;
 }
-#artBoxModal .modal-content{
-   max-width: 90%;
-   max-height: 90vh !important;
+#artBoxModal .modal-body {
+	display: flex;
 }
 #artBoxModal .btn-close{
    right:0; 
    position: absolute; 
    background-color: aquamarine;
 }
-#artBoxModal #modalImage{
-   max-height: 90vh;
+#artBoxModal #modalImage {
+	object-fit: contain;
+	max-height: 90vh;
 }
