@@ -35,24 +35,34 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
    -->
-      <div class="w-25 p-5">
+      <div class="w-50 p-5">
          <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter Username">
-            </div>
-            <div class="mb-5">
+         </div>
+         <div class="mb-5">
             <label for="password" class="form-label">Password</label>
             <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password">
-            </div>
+         </div>
 
             
          <form id="KK-song-form" class="">
             <h2 class="mt-5">Info</h2>
             <hr class="pb-2 m-0">
 
-            <div class="mt-2 mb-3">
+            <div class="mt-3">
+               <label for="kk-title" class="form-label">Song Title</label>
+               <input data-KKDATA-TYPE="link" id="kk-title" name="kk-title" type="text" class="ms-3 form-control KKRADIO-DATA"  placeholder="Song Title" required>
+            </div>
+
+            <div class="mt-3">
+               <label for="kk-artist" class="form-label">Song Artist</label>
+               <input data-KKDATA-TYPE="link" id="kk-artist" name="kk-artist" type="text" class="ms-3 form-control KKRADIO-DATA"  placeholder="Song artist" required>
+            </div>
+
+            <div class="mt-3 mb-3">
                <label class="form-check-label" for="kk-game">AC Game</label>
-               <select class="form-select KKRADIO-DATA" id="kk-game" name="kk-game" aria-label="Default select example">
+               <select class="ms-3 form-select KKRADIO-DATA" id="kk-game" name="kk-game" aria-label="Default select example">
                   <option value="Undefined">Undefined</option>
                   <option value="NH">New Horizons</option>
                   <option value="NL">New Leaf</option>
@@ -61,32 +71,56 @@
                   <option value="OG">Animal Crossing (Original)</option>
                </select>
             </div>
+
+            <div class="mt-3 mb-3">
+               <label class="form-check-label" for="kk-mood">Song Mood</label>
+               <select class="ms-3 form-select KKRADIO-DATA" id="kk-mood" name="kk-mood" aria-label="Default select example">
+                  <option value="Upbeat">Upbeat</option>
+                  <option value="Happy">Happy</option>
+                  <option value="Lofi">Lofi</option>
+                  <option value="SadSlow">Sad/Slow</option>
+               </select>
+            </div>
             
-            <div class="form-check form-check-inline">
-               <input checked data-KKDATA-TYPE="songtype" class="form-check-input KKRADIO-DATA" type="radio" name="kk-remixornot" id="inlineRadio2" value="Original" required>
-               <label class="form-check-label" for="inlineRadio2">Original</label>
-             </div>
-            <div class="mt-3 form-check form-check-inline">
-               <input data-KKDATA-TYPE="songtype" class="form-check-input KKRADIO-DATA" type="radio" name="kk-remixornot" id="inlineRadio1" value="Remix" required>
-               <label class="form-check-label" for="inlineRadio1">Remix</label>
-             </div>
+            <label class="form-check-label mt-3" for="kk-remixornot">Remix?</label><br>
+            <div class="p-2 ms-3 border rounded">
+               <div class="form-check form-check-inline">
+                  <input checked data-KKDATA-TYPE="songtype" class="form-check-input KKRADIO-DATA" type="radio" name="kk-remixornot" id="inlineRadio2" value="Original" required>
+                  <label class="form-check-label" for="inlineRadio2">Original</label>
+                </div>
+               <div class="form-check form-check-inline">
+                  <input data-KKDATA-TYPE="songtype" class="form-check-input KKRADIO-DATA" type="radio" name="kk-remixornot" id="inlineRadio1" value="Remix" required>
+                  <label class="form-check-label" for="inlineRadio1">Remix</label>
+                </div>
+            </div>
             <br>
-            <div class="mt-3 form-check form-check-inline">
-               <input data-KKDATA-TYPE="weather" class="form-check-input KKRADIO-DATA" type="radio" name="kk-weather" id="weatherRadio1" value="Sunny" required>
-               <label class="form-check-label" for="weatherRadio1">Sunny</label>
-             </div>
-             <div class="form-check form-check-inline">
-               <input data-KKDATA-TYPE="weather" class="form-check-input KKRADIO-DATA" type="radio" name="kk-weather" id="weatherRadio2" value="Rainy" required>
-               <label class="form-check-label" for="weatherRadio2">Rainy</label>
-             </div>
-             <div class="form-check form-check-inline">
-               <input checked data-KKDATA-TYPE="weather" class="form-check-input KKRADIO-DATA" type="radio" name="kk-weather" id="weatherRadio3" value="Undefined" required>
-               <label class="form-check-label" for="weatherRadio3">Undefined</label>
-             </div>
+
+            <label class="form-check-label" for="kk-weather">Weather?</label><br>
+            <div class="ms-3 p-2 border rounded">
+               <div class=" form-check form-check-inline">
+                  <input data-KKDATA-TYPE="weather" class="form-check-input KKRADIO-DATA" type="radio" name="kk-weather" id="weatherRadio1" value="Sunny" required>
+                  <label class="form-check-label" for="weatherRadio1">Sunny</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input data-KKDATA-TYPE="weather" class="form-check-input KKRADIO-DATA" type="radio" name="kk-weather" id="weatherRadio2" value="Rainy" required>
+                  <label class="form-check-label" for="weatherRadio2">Rainy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input checked data-KKDATA-TYPE="weather" class="form-check-input KKRADIO-DATA" type="radio" name="kk-weather" id="weatherRadio3" value="Undefined" required>
+                  <label class="form-check-label" for="weatherRadio3">Undefined</label>
+                </div>
+            </div>
             <br>
+
+            <div class="form-check ms-3 mt-3">
+               <input class="form-check-input" type="checkbox" value="true" id="kk-is-kk" name="kk-is-kk">
+               <label class="form-check-label" for="kk-is-kk">
+                 K.K. Slider Song?
+               </label>
+             </div>
              
-             <label for="kk-time" class="form-label mt-3">Song Time</label>
-             <input data-KKDATA-TYPE="time" class="form-control KKRADIO-DATA" list="datalistOptions" id="kk-time" name="kk-time" placeholder="Type to search..." required>
+             <label for="kk-time" class=" form-label mt-3">Song Time</label>
+             <input data-KKDATA-TYPE="time" class="ms-3 form-control KKRADIO-DATA" list="datalistOptions" id="kk-time" name="kk-time" placeholder="Type to search..." required>
              <datalist id="datalistOptions">
                <option value="1AM">
                <option value="2AM">
@@ -114,8 +148,8 @@
              </datalist>
 
              <div class="mt-3">
-               <label for="kk-link" class="form-label">Song Link</label>
-               <input data-KKDATA-TYPE="link" id="kk-link" name="kk-link" type="text" class="form-control KKRADIO-DATA"  placeholder="Song Link" required>
+               <label for="kk-link" class="  mt-3 form-label">Song Link</label>
+               <input data-KKDATA-TYPE="link" id="kk-link" name="kk-link" type="text" class="ms-3 form-control KKRADIO-DATA"  placeholder="Song Link" required>
             </div>
             <br><br><button id="submitss" class="btn btn-primary mt-5">Submit</button>
          </form>
@@ -134,21 +168,30 @@
    $("#KK-song-form").submit(function(e){
       e.preventDefault();
       var form = $(this);
+      var values = form.serializeArray();
+       values = values.concat(
+            jQuery('#KK-song-form input[type=checkbox]:not(:checked)').map(
+               function() {
+                  return {"name": this.name, "value": false}
+               }).get()
+      );
 
       let username = $("#username").val();
       let password = $("#password").val();
+      /* NEED A CHECKBOX FOR KK SONG & A CHECKBOX FOR LOCATION (LIKE THE ROOST). MAYBE CAN GET TITLE/ARTIST? */
       $.ajax({
          type: "POST",
          url: 'https://jarofmilk.com/testingapi/KKRadioNewSong/',
          timeout: 20000,    
          crossDomain: true,
          dataType: "json",
-         data: form.serialize(),
+         data: values,
          beforeSend: function (xhr){ 
             xhr.setRequestHeader('Authorization', btoa(username + ":" + password)); 
          },
          success: function(data) {
-            alert("Success! " + data["msg"]);
+            if(!data["success"]) alert("Adding Failed.  " + data["msg"]);
+            else alert("Song Successfully Added! " + data["msg"]);
          },
          error: function(XMLHttpRequest, textStatus, errorThrown) { 
             if(XMLHttpRequest.responseJSON != undefined && !XMLHttpRequest.responseJSON["success"]){
@@ -159,5 +202,5 @@
    });
       
    
-
+   
 </script>
