@@ -77,7 +77,6 @@
                <select class="ms-3 form-select KKRADIO-DATA" id="kk-mood" name="kk-mood" aria-label="Default select example">
                   <option value="Upbeat">Upbeat</option>
                   <option value="Happy">Happy</option>
-                  <option value="Lofi">Lofi</option>
                   <option value="SadSlow">Sad/Slow</option>
                </select>
             </div>
@@ -119,9 +118,17 @@
                </label>
              </div>
              
+            <div class="form-check ms-3 mt-3">
+               <input class="form-check-input" type="checkbox" value="true" id="kk-is-lofi" name="kk-is-lofi">
+               <label class="form-check-label" for="kk-is-lofi">
+                 Lofi?
+               </label>
+             </div>
+             
              <label for="kk-time" class=" form-label mt-3">Song Time</label>
              <input data-KKDATA-TYPE="time" class="ms-3 form-control KKRADIO-DATA" list="datalistOptions" id="kk-time" name="kk-time" placeholder="Type to search..." required>
              <datalist id="datalistOptions">
+               <option value="Undefined">
                <option value="1AM">
                <option value="2AM">
                <option value="3AM">
