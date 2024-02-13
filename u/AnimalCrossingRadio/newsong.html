@@ -7,34 +7,6 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-<!-- 	
-     <form >
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input  id="username" type="text" name="username" class="form-control" aria-describedby="emailHelp" placeholder="Enter Username">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input id="password" type="password" name="password" class="form-control" placeholder="Password">
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-
-      <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-         <label class="form-check-label" for="inlineRadio1">1</label>
-       </div>
-       <div class="form-check form-check-inline">
-         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-         <label class="form-check-label" for="inlineRadio2">2</label>
-       </div>
-
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-   -->
       <div class="w-50 p-5">
          <div class="mb-3">
             <label for="username" class="form-label">Username</label>
@@ -44,6 +16,40 @@
             <label for="password" class="form-label">Password</label>
             <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password">
          </div>
+         
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   <iconify-icon icon="mdi:spotify"></iconify-icon> Find With Spotify
+ </button>
+ 
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h1 class="modal-title" id="exampleModalLabel">Find With Spotify</h1>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <div class="m-3">
+            <label for="spotify-song" class="form-label">Song Title</label>
+            <input data-KKDATA-TYPE="link" id="spotify-song" name="spotify-song" type="text" class="form-control"  placeholder="Spotify Link">
+         </div>
+       </div>
+       <div class="modal-footer">
+          
+         <div class="form-check ms-3 mt-3">
+            <input class="form-check-input" type="checkbox" value="true" id="kk-playlistoralbum" name="kk-playlistoralbum">
+            <label class="form-check-label" for="kk-playlistoralbum">
+              Playlist/Album
+            </label>
+          </div>
+         <button id="spotify-search-btn"type="button" class="btn btn-primary" data-bs-dismiss="modal">Search</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ <hr>
 
             
          <form id="KK-song-form" class="">
@@ -159,10 +165,13 @@
                <input data-KKDATA-TYPE="link" id="kk-link" name="kk-link" type="text" class="ms-3 form-control KKRADIO-DATA"  placeholder="Song Link" required>
             </div>
             <br><br><button id="submitss" class="btn btn-primary mt-5">Submit</button>
+            <button id="skipss" class="btn btn-secondary mt-5">Skip</button>
          </form>
 
 
       </div>
+      <div id="playlisthiddenresults" class="hidden"></div>
+
   </body>
 </html>
 
@@ -170,44 +179,9 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="assets/js/newsong.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 <script>
-   $("#KK-song-form").submit(function(e){
-      e.preventDefault();
-      var form = $(this);
-      var values = form.serializeArray();
-       values = values.concat(
-            jQuery('#KK-song-form input[type=checkbox]:not(:checked)').map(
-               function() {
-                  return {"name": this.name, "value": false}
-               }).get()
-      );
 
-      let username = $("#username").val();
-      let password = $("#password").val();
-      /* NEED A CHECKBOX FOR KK SONG & A CHECKBOX FOR LOCATION (LIKE THE ROOST). MAYBE CAN GET TITLE/ARTIST? */
-      $.ajax({
-         type: "POST",
-         url: 'https://jarofmilk.com/testingapi/KKRadioNewSong/',
-         timeout: 20000,    
-         crossDomain: true,
-         dataType: "json",
-         data: values,
-         beforeSend: function (xhr){ 
-            xhr.setRequestHeader('Authorization', btoa(username + ":" + password)); 
-         },
-         success: function(data) {
-            if(!data["success"]) alert("Adding Failed.  " + data["msg"]);
-            else alert("Song Successfully Added! " + data["msg"]);
-         },
-         error: function(XMLHttpRequest, textStatus, errorThrown) { 
-            if(XMLHttpRequest.responseJSON != undefined && !XMLHttpRequest.responseJSON["success"]){
-               alert(XMLHttpRequest.responseJSON["error"]);
-            }
-         } 
-      });
-   });
-      
-   
    
 </script>
