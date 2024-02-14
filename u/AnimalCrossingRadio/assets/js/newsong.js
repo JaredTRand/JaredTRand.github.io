@@ -133,8 +133,10 @@
    $("#skipss").on("click", function(){
       if($("#playlisthiddenresults").data("kk-result") != undefined && $("#playlisthiddenresults").data("kk-result").length > 0){
          putSongDataOnForm($("#playlisthiddenresults").data("kk-result").shift());
+         $("#amtleft").text($("#playlisthiddenresults").data("kk-result").length + " Left.");
       }
    });
+
    $("#spotify-search-btn").on("click", function(){
       let username = $("#username").val();
       let password = $("#password").val();
@@ -156,6 +158,7 @@
                $("#playlisthiddenresults").data("kk-result", data["data"]);
                if($("#playlisthiddenresults").data("kk-result") != undefined && $("#playlisthiddenresults").data("kk-result").length > 0){
                   putSongDataOnForm($("#playlisthiddenresults").data("kk-result").shift());
+                  $("#amtleft").text($("#playlisthiddenresults").data("kk-result").length + " Left.")
                }
                console.log(data);
             }else{
@@ -207,6 +210,7 @@
 
       if($("#playlisthiddenresults").data("kk-result") != undefined && $("#playlisthiddenresults").data("kk-result").length > 0){
          putSongDataOnForm($("#playlisthiddenresults").data("kk-result").shift());
+         $("#amtleft").text($("#playlisthiddenresults").data("kk-result").length + " Left.")
       }
    });
       
