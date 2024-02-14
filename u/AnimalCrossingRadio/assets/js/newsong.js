@@ -5,9 +5,11 @@
       $("#kk-title").val("");
       $("#kk-artist").val("");
       $("#kk-game").val("");
+      $("#kk-mood").val("Unspecified")
       $("#kk-time").val("");
       $("#kk-link").val("");
       $("#kk-is-lofi").prop("checked", false);
+      $("#kk-is-kk").prop("checked", false);
       $("#inlineRadio1").prop("checked", false);
       $("#weatherRadio3").prop("checked", true);
       console.log(song)
@@ -113,7 +115,7 @@
          $("#kk-is-kk").prop("checked", true);
 
    /* Lofi Song */
-      if(d_title_lowerandspaceless.includes("lofi")){
+      if(d_title_lowerandspaceless.includes("lofi") || d_title_lowerandspaceless.includes("chillhop")){
          $("#kk-is-lofi").prop("checked", true);
          $("#inlineRadio1").prop("checked", true);
       }

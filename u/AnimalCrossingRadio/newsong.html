@@ -78,14 +78,25 @@
                </select>
             </div>
 
-            <div class="mt-3 mb-3">
+<!--             <div class="mt-3 mb-3">
                <label class="form-check-label" for="kk-mood">Song Mood</label>
                <select class="ms-3 form-select KKRADIO-DATA" id="kk-mood" name="kk-mood" aria-label="Default select example">
                   <option value="Upbeat">Upbeat</option>
                   <option value="Happy">Happy</option>
                   <option value="SadSlow">Sad/Slow</option>
                </select>
-            </div>
+            </div> -->
+
+            <label for="kk-mood" class=" form-label mt-3">Song Mood</label>
+            <input data-KKDATA-TYPE="time" class="ms-3 form-control KKRADIO-DATA" list="datalistOptions" id="kk-mood" name="kk-mood" placeholder="Type to search..." required>
+            <datalist id="datalistOptions">
+              <option value="Unspecified">
+              <option value="Happy">
+              <option value="Upbeat">
+              <option value="Sad">
+              <option value="Slow">
+              <option value="Rockin">
+            </datalist>
             
             <label class="form-check-label mt-3" for="kk-remixornot">Remix?</label><br>
             <div class="p-2 ms-3 border rounded">
