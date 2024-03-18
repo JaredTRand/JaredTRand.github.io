@@ -225,6 +225,7 @@ var createdSkillBoxes = false;
 function addSkillBoxes(){
    const skillsAndIcons = {"Java":"bxl:java",
                            "Python":"bxl:python",
+                           "SQL":"ph:file-sql",
                            "HTML":"akar-icons:html-fill",
                            "CSS":"akar-icons:css-fill",
                            "Javascript":"material-symbols:javascript",
@@ -233,7 +234,8 @@ function addSkillBoxes(){
                            "Atlassian Suite":"mdi:atlassian",
                            "Powershell":"mdi:powershell",
                            "Blender":"simple-icons:blender", 
-                           "Illustrator":"devicon-plain:illustrator"};
+                           "Illustrator":"devicon-plain:illustrator"
+                           };
                            
    for(const skill in skillsAndIcons){
       var skill_box = $('<a href="javascript:void(0)" class="col col-md-2 m-3 skill-boxes" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="' + skill + '" tabindex="0"> <div class="section-wrapper-inverse rounded rounded-bottom"> <div class="align-self-center"> <iconify-icon class="iconify-skill-icon p-2" icon="' + skillsAndIcons[skill] +'" style="color: #160221;" width="100" height="100"></iconify-icon> </div> </div> </a>')
