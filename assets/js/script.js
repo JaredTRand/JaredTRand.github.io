@@ -11,7 +11,7 @@ $( document ).ready(function() {
 
    //add skill boxes
    if(!createdSkillBoxes) addSkillBoxes();
-
+   if(!createdArtImages) createArtImages();
 
    $( ".nav-item").on( "click", function() {
       var contentToShow = $(this).data("content");
